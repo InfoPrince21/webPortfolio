@@ -137,13 +137,26 @@ a, a:hover {
     opacity: 0;
 }
 
+.bg2 {
+    opacity: 0;
+}
+
 .fade-in {
     opacity: 0;
-    transition: opacity 200ms ease-in;
+    transition: opacity 600ms ease-in;
 }
 
 .fade-in.appear {
     opacity: 1;
+}
+
+
+.from-bottom {
+    transform: translateY(60%);
+}
+
+.from-bottom.appear {
+    transform: translateY(0);
 }
 
 .from-left {
@@ -151,17 +164,18 @@ a, a:hover {
     transform: translate(-30%);
 }
 
+
 .from-right {
     grid-column: 3 / 4;
     transform: translate(30%);
 }
 
-.from-left, .from-right{
-    transition: opacity 800ms ease-in, transform 600ms ease-in;
+.from-left, .from-right, .from-bottom {
+    transition: opacity 900ms ease-in, transform 700ms ease-in;
     opacity: 0;
 }
 
-.from-left.appear, .from-right.appear{
+.from-left.appear, .from-right.appear, .from-bottom.appaer { 
     transform: translateX(0);
     opacity: 1;
 }
@@ -182,7 +196,7 @@ a, a:hover {
 } */
 
 
-/* .animate {
+.tilt {
     transform: perspective(1500px) rotateY(15deg);
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
@@ -191,7 +205,9 @@ a, a:hover {
     &:hover {
       transform: perspective(3000px) rotateY(5deg);
     }
-  } */
+  }
+
+
 
   /* .divider, .divider2{
     transform:
@@ -204,7 +220,7 @@ a, a:hover {
   } */
 
   
-  /* .divider, .divider2 {
+/* .divider, .divider2 {
     transform:
       perspective(800px)
       rotateY(-8deg);
@@ -215,7 +231,7 @@ a, a:hover {
       rgba(0, 0, 0, 0.05) 0px 1px 0px 0px,
       rgba(0, 0, 0, 0.03) 0px 0px 8px 0px,
       rgba(0, 0, 0, 0.1) 0px 20px 30px 0px;
-  
+
     &:hover {
       transform: perspective(800px) rotateY(-4deg);
     }

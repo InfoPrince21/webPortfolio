@@ -3,7 +3,7 @@ const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll(".slide-in");
 const appearOptions = {
     threshold: 0,
-    rootMargin: "0px 0px -75px 0px"
+    rootMargin: "0px 0px -50px 0px"
 };
 const appearOnScroll = new IntersectionObserver
 (function(
@@ -48,21 +48,20 @@ sliders.forEach(slider => {
         $('.bg').css({
             'opacity': + (scrollpos) + '%'
         })
-        console.log(scrollpos)
+        //console.log(scrollpos)
     })
 
  });
 
-
  
-// $(function() {
+$(function() {
     
-//     let $animate = $(".animate");
-//     let $win = $(window);
+    let $animate = $(".animate");
+    let $win = $(window);
 
-//     $win.on('scroll', function () {
-//         let top = $win.scrollTop() / 5;
-//         $animate.css('transform', 'skewX(' + top + 'deg) ');
-//     })
+    $win.on('scroll', function () {
+        let top = $win.scrollTop() / 29;
+        $animate.css('transform', 'skewX(' + top + 'deg) ');
+    })
 
-//  });
+ });
