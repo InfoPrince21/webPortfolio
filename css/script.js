@@ -44,7 +44,7 @@ sliders.forEach(slider => {
 
  $(function() {
     $(window).scroll(function() {
-        let scrollpos = ($(window).scrollTop());
+        let scrollpos = ($(window).scrollTop()) * .5;
         $('.bg').css({
             'opacity': + (scrollpos) + '%'
         })
